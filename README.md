@@ -2,7 +2,9 @@
 
 SAAF_sqlite - 
 
-This repository is in support of Tutorial #6 for TCSS 562.
+This repository is in support of Tutorial #6 for TCSS 562 leveraging the SAAF framework.
+
+### SAAF - The Serverless Application Analytics Framework
 
 This project provides coding templates to support tracing FaaS function server infrastructure for code deployments.
 A generic Hello World function is provided for each language as a starting point to write infrastructure traceable FaaS functions to enable tracing code containers and hosts (VMs) created by FaaS platform providers for hosting FaaS functions.  This information can help verify the state of infrastructure (COLD vs. WARM) to understand performance results, and help preserve infrastructure for better FaaS performance.
