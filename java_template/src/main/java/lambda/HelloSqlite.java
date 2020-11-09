@@ -43,14 +43,9 @@ public class HelloSqlite implements RequestHandler<Request, HashMap<String, Obje
         
         //****************START FUNCTION IMPLEMENTATION*************************
         //Add custom key/value attribute to SAAF's output. (OPTIONAL)
-        //inspector.addAttribute("message", "Hello " + request.getName() 
-        //        + "! This is an attributed added to the Inspector!");
-        
         
         //Create and populate a separate response object for function output. (OPTIONAL)
         Response r = new Response();
-        //response.setValue("Hello " + request.getNameALLCAPS()
-        //        + "! This is from a response object!");
 
         String pwd = System.getProperty("user.dir");
         logger.log("pwd=" + pwd);
@@ -64,10 +59,10 @@ public class HelloSqlite implements RequestHandler<Request, HashMap<String, Obje
         try
         {
             // Connection string an in-memory SQLite DB
-            Connection con = DriverManager.getConnection("jdbc:sqlite:"); 
+            //Connection con = DriverManager.getConnection("jdbc:sqlite:"); 
 
             // Connection string for a file-based SQlite DB
-            //Connection con = DriverManager.getConnection("jdbc:sqlite:/tmp/mytest.db");
+            Connection con = DriverManager.getConnection("jdbc:sqlite:/tmp/mytest.db");
 
             // Detect if the table 'mytable' exists in the database
             PreparedStatement ps = con.prepareStatement("SELECT name FROM sqlite_master WHERE type='table' AND name='mytable'");
